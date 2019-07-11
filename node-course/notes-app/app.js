@@ -1,5 +1,6 @@
-const fs = require('fs');
+const validator = require('validator');
 
-// fs.writeFileSync('notes.txt', 'This file was created by Node.js');
+const getNotes = require('./notes.js');
 
-fs.appendFileSync('notes.txt', '. Sarasa appended.')
+console.log(getNotes());
+console.log(validator.isURL('https:/mead.io'));
